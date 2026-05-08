@@ -146,6 +146,7 @@
                 <div class="tarjeta" onclick="cargarSeccion('aire')">✈️ AÉREO</div>
                 <div class="tarjeta" onclick="cargarSeccion('logistica')">📦 LOGÍSTICA</div>
                 <div class="tarjeta" onclick="cargarSeccion('investigaciones')">🔬 INVESTIGACIONES</div>
+                <div class="tarjeta" onclick="cargarSeccion('inteligencia')">🕵️ INTELIGENCIA</div>
             </div>
             <div id="detalle"></div>
         </div>
@@ -157,55 +158,3 @@
             document.getElementById("contenido").style.display = "flex";
             document.body.style.overflow = "auto";
         }
-
-        function regresar() {
-            document.getElementById("inicio").style.display = "block";
-            document.getElementById("contenido").style.display = "none";
-            document.getElementById("detalle").style.display = "none";
-            document.body.style.overflow = "hidden";
-        }
-
-        function cargarSeccion(s) {
-            const d = document.getElementById("detalle");
-            d.style.display = "block";
-            
-            const info = {
-                marina: `
-                    <h3>⚓ ESTRATEGIA NAVAL DEFINITIVA</h3>
-                    <p><strong>Composición y Proporción:</strong> Ratio de <strong>4 pantallas por cada Buque Capital</strong> para bloquear torpedos.</p>
-                    <ul>
-                        <li><strong>Fuerza de Choque:</strong> Tu flota principal en puerto para ahorrar combustible.</li>
-                        <li><strong>Patrulla:</strong> Cruceros Ligeros rápidos con radar.</li>
-                        <li><strong>Guerra de Convoyes:</strong> Submarinos en grupos de 8 a 12 en Océano Profundo.</li>
-                    </ul>`,
-                tierra: `
-                    <h3>🪖 EJÉRCITO Y COMBATE TERRESTRE</h3>
-                    <p><strong>Ancho de Combate:</strong> Atacar desde múltiples flancos añade +35 de ancho.</p>
-                    <ul>
-                        <li><strong>Terrenos:</strong> Llanuras para tanques; Montañas y Ciudades para defensa.</li>
-                        <li><strong>Doctrinas:</strong> Fuego Superior, Guerra Móvil o Asalto en Masa.</li>
-                    </ul>`,
-                aire: `<h3>✈️ SUPERIORIDAD AÉREA</h3><p>Sin superioridad aérea, tus tropas sufren penalización de defensa. El apoyo CAS es vital.</p>`,
-                logistica: `
-                    <h3>📦 LOGÍSTICA Y SUMINISTROS</h3>
-                    <p><strong>Red de Suministro:</strong> Fluye desde la Capital hacia los Hubs por vías férreas.</p>
-                    <ul>
-                        <li><strong>Motorización:</strong> Cambia de caballos a camiones para expandir el alcance.</li>
-                        <li><strong>Trenes Blindados:</strong> Vitales para resistir bombardeos logísticos enemigos.</li>
-                    </ul>`,
-                investigaciones: `
-                    <h3>🔬 PRIORIDADES DE INVESTIGACIÓN</h3>
-                    <p><strong>Gestión del Tiempo:</strong> Prioriza bonos de industria y electrónica primero.</p>
-                    <ul>
-                        <li><strong>Industria:</strong> Máquinas herramientas para capacidad de producción.</li>
-                        <li><strong>Electrónica:</strong> Computación para reducir el tiempo de todas las investigaciones futuras.</li>
-                        <li><strong>Compañías de Apoyo:</strong> Radio y Logística son claves para el frente.</li>
-                    </ul>`
-            };
-
-            d.innerHTML = info[s];
-            d.scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
-</body>
-</html>
