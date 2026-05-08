@@ -1,11 +1,10 @@
-<A fines de entretenimiento y conocimiento.>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hearts Of Iron IV - Cuartel de Mando</title>
     <style>
-        /* --- ESTÉTICA VISUAL (BLOQUEADA) --- */
+        /* --- ESTÉTICA VISUAL (FIJA) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 
         body {
@@ -23,7 +22,7 @@
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.82);
             z-index: 1;
         }
 
@@ -67,7 +66,7 @@
             box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
             transition: 0.3s;
             position: relative;
-            z-index: 30;
+            z-index: 100;
         }
 
         .btn-entrar:hover { transform: scale(1.05); box-shadow: 0 0 40px #00aaff; }
@@ -165,35 +164,43 @@
             d.style.display = "block";
             
             const info = {
-                marina: `<h3>⚓ ESTRATEGIA NAVAL</h3><p>Ratio 4:1 de pantallas. Patrulla con cruceros ligeros y usa la fuerza de choque para el combate decisivo.</p>`,
+                marina: `
+                    <h3>⚓ ESTRATEGIA NAVAL DEFINITIVA</h3>
+                    <p><strong>Composición de Flota:</strong> La clave es el posicionamiento y el ratio de pantallas (Destructores y Cruceros Ligeros). Se recomienda un ratio de 4:1 para proteger a los Buques Capitales.</p>
+                    <ul>
+                        <li><strong>Misiones:</strong> Patrulla para detectar, Fuerza de Choque para destruir.</li>
+                        <li><strong>Submarinos:</strong> Úsalos en grupos pequeños para guerra de convoyes en océanos profundos.</li>
+                    </ul>`,
                 tierra: `
                     <h3>🪖 EJÉRCITO Y COMBATE TERRESTRE</h3>
-                    <p><strong>Mecánicas de Batalla:</strong> Las divisiones luchan según su Ataque Ligero, Pesado y Defensa. Se pierde cuando la Organización (barra verde) o Fuerza (barra naranja) llega a cero.</p>
+                    <p><strong>Mecánicas Cruciales:</strong> El éxito depende del Ataque Ligero (contra infantería), Ataque Pesado (contra tanques) y la Organización (capacidad de mantenerse en lucha).</p>
                     <ul>
-                        <li><strong>Ancho de Combate:</strong> Determinado por el terreno. Atacar desde múltiples direcciones suma +35 de ancho por cada lado adicional, permitiendo usar más reservas.</li>
-                        <li><strong>Terrenos:</strong> Selva y Pantano son los peores; Llanura es el mejor para avanzar. Ciudades y Colinas ofrecen bonos defensivos.</li>
-                        <li><strong>Generales:</strong> Nunca dejes ejércitos sin general. Ganan rasgos por experiencia (líder de infantería, montañero) y suben niveles de ataque, defensa, planificación y logística.</li>
+                        <li><strong>Ancho de Combate:</strong> Atacar desde múltiples flancos añade +35 de ancho por cada lado extra, permitiendo que entren más reservas al combate.</li>
+                        <li><strong>Terrenos:</strong> Las Llanuras son ideales para tanques. Montañas y Ciudades dan bonos defensivos masivos. Evita Selvas o Pantanos.</li>
                         <li><strong>Doctrinas Terrestres:</strong> 
                             <ul>
-                                <li><em>Guerra Móvil:</em> Rapidez y blindados, decae en late game.</li>
-                                <li><em>Fuego Superior:</em> Máximo ataque ligero, ideal contra la IA.</li>
-                                <li><em>Gran Plan:</em> Bonos de planificación y defensa.</li>
-                                <li><em>Asalto en Masa:</em> Reduce el ancho de la infantería, ideal para "avalanchas humanas".</li>
+                                <li><em>Fuego Superior:</em> Máximo daño de artillería, ideal contra la IA.</li>
+                                <li><em>Guerra Móvil:</em> Enfoque en velocidad y tanques para embolsamientos rápidos.</li>
+                                <li><em>Asalto en Masa:</em> Reduce el ancho de la infantería para saturar el frente.</li>
                             </ul>
                         </li>
                     </ul>`,
-                aire: `<h3>✈️ SUPERIORIDAD AÉREA</h3><p>Los cazas son obligatorios para evitar penalizadores de movimiento y permitir el bombardeo táctico.</p>`,
+                aire: `<h3>✈️ SUPERIORIDAD AÉREA</h3><p>Sin superioridad aérea, tus tropas sufren una penalización de defensa y movimiento. El apoyo aéreo cercano (CAS) es el mayor multiplicador de daño en tierra.</p>`,
                 logistica: `
                     <h3>📦 LOGÍSTICA Y SUMINISTROS</h3>
-                    <p><strong>Sistema de Red:</strong> El suministro fluye desde la Capital hacia los Hubs (centros de suministros) por vías férreas o hacia puertos por convoys.</p>
+                    <p><strong>Red de Suministro:</strong> El suministro fluye desde la Capital hacia los Hubs (centros de suministros) por vías férreas o hacia puertos por convoys.</p>
                     <ul>
-                        <li><strong>Motorización de Hubs:</strong> Puedes configurar cada centro para usar caballos, camiones o motorización total. Esto extiende el "alcance" del suministro hacia las provincias cercanas.</li>
-                        <li><strong>Ferrocarriles:</strong> Si hay cuellos de botella, mejora el nivel de las vías. El nivel de suministro que llega depende del nivel más bajo de vía en la ruta hacia la capital.</li>
-                        <li><strong>Trenes:</strong> Produce Trenes Civiles (estándar), de Austeridad (baratos) o Blindados (resistentes a ataques aéreos).</li>
-                        <li><strong>Puentes Aéreos:</strong> Aviones de transporte pueden suministrar tropas aisladas o cercadas si tienes superioridad aérea.</li>
-                        <li><strong>Compañía de Logística:</strong> Indispensable en frentes grandes (Rusia/África) para reducir el consumo de suministros y combustible de la división.</li>
-                    </ul>
-                    <p><strong>Dato Crítico:</strong> El desempeño logístico debe estar siempre arriba del 70%. Los cuadros de cajas amarillas/rojas en el mapa indican dónde el suministro es insuficiente para atacar.</p>`
+                        <li><strong>Motorización de Hubs:</strong> Clickea en un Hub para cambiar de caballos a camiones (Nivel 1 o 2). Esto expande el rango de entrega de suministros.</li>
+                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para eliminar cuellos de botella. La capacidad total depende del eslabón más débil de la ruta.</li>
+                        <li><strong>Tipos de Trenes:</strong> 
+                            <ul>
+                                <li><em>Trenes de Austeridad:</em> Baratos y rápidos de producir.</li>
+                                <li><em>Trenes Blindados:</em> Fundamentales para resistir bombardeos logísticos enemigos.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Puentes Aéreos:</strong> Aviones de transporte para suministrar unidades aisladas o cercadas.</li>
+                        <li><strong>Desempeño Logístico:</strong> Debe estar siempre arriba del 70% para evitar atrición y pérdida de organización.</li>
+                    </ul>`
             };
 
             d.innerHTML = info[s];
