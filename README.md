@@ -109,6 +109,12 @@
             line-height: 1.7;
             max-height: 550px;
             overflow-y: auto;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         #detalle h3 { color: #00aaff; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 5px; }
@@ -173,57 +179,46 @@
             const info = {
                 marina: `
                     <h3>⚓ ESTRATEGIA NAVAL DEFINITIVA</h3>
-                    <p><strong>Composición y Proporción:</strong> La supervivencia de tu flota depende de las "pantallas" (Destructores y Cruceros Ligeros). Debes mantener un ratio mínimo de <strong>4 pantallas por cada Buque Capital</strong> para bloquear torpedos enemigos.</p>
+                    <p><strong>Composición y Proporción:</strong> La supervivencia de tu flota depende de las pantallas (Destructores y Cruceros Ligeros). Debes mantener un ratio mínimo de 4 pantallas por cada Buque Capital para bloquear torpedos enemigos.</p>
                     <ul>
-                        <li><strong>Fuerza de Choque (Strike Force):</strong> Tu flota principal. Déjala en puerto con esta misión para ahorrar combustible; solo saldrá cuando tus patrullas detecten una flota enemiga importante.</li>
-                        <li><strong>Patrulla:</strong> Usa grupos de 1-2 Cruceros Ligeros muy rápidos equipados con radares y catapultas de aviones. Su objetivo es detectar, no combatir.</li>
-                        <li><strong>Guerra de Convoyes:</strong> Los submarinos son letales en grupos de 8 a 12. Ataca en zonas de "Océano Profundo" para maximizar su ocultamiento.</li>
-                        <li><strong>Control de Estrechos:</strong> El acceso a mares cerrados depende de puntos terrestres clave como Gibraltar, Suez o Copenhague.</li>
-                        <li><strong>Diseño de Buques:</strong> Prioriza el Control de Daños y la Batería Principal en acorazados. En destructores, enfócate en cargas de profundidad si buscas cazar submarinos.</li>
+                        <li><strong>Fuerza de Choque (Strike Force):</strong> Tu flota principal. Déjala en puerto para ahorrar combustible; solo saldrá cuando tus patrullas detecten al enemigo.</li>
+                        <li><strong>Patrulla:</strong> Usa Cruceros Ligeros rápidos con radares. Su objetivo es detectar, no combatir.</li>
+                        <li><strong>Guerra de Convoyes:</strong> Submarinos en grupos de 8 a 12 en Océano Profundo.</li>
+                        <li><strong>Diseño:</strong> Prioriza el Control de Daños y la Batería Principal.</li>
                     </ul>`,
                 tierra: `
                     <h3>🪖 EJÉRCITO Y COMBATE TERRESTRE</h3>
-                    <p><strong>Mecánicas de Batalla:</strong> Las divisiones luchan según su Ataque Ligero, Pesado y Defensa. Se pierde cuando la Organización (barra verde) o Fuerza (barra naranja) llega a cero.</p>
+                    <p><strong>Mecánicas de Batalla:</strong> Las divisiones luchan según su Ataque Ligero, Pesado y Defensa. Se pierde cuando la Organización o Fuerza llega a cero.</p>
                     <ul>
-                        <li><strong>Ancho de Combate:</strong> Determinado por el terreno. Atacar desde múltiples direcciones suma +35 de ancho por cada lado adicional, permitiendo usar más reservas.</li>
+                        <li><strong>Ancho de Combate:</strong> Determinado por el terreno. Atacar desde múltiples direcciones suma +35 de ancho adicional.</li>
                         <li><strong>Terrenos:</strong> Selva y Pantano son los peores; Llanura es el mejor para avanzar. Ciudades y Colinas ofrecen bonos defensivos.</li>
-                        <li><strong>Generales:</strong> Nunca dejes ejércitos sin general. Ganan rasgos por experiencia (líder de infantería, montañero) y suben niveles de ataque, defensa, planificación y logística.</li>
-                        <li><strong>Doctrinas Terrestres:</strong> 
-                            <ul>
-                                <li><em>Guerra Móvil:</em> Rapidez y blindados, decae en late game.</li>
-                                <li><em>Fuego Superior:</em> Máximo ataque ligero, ideal contra la IA.</li>
-                                <li><em>Gran Plan:</em> Bonos de planificación y defensa.</li>
-                                <li><em>Asalto en Masa:</em> Reduce el ancho de la infantería, ideal para "avalanchas humanas".</li>
-                            </ul>
-                        </li>
+                        <li><strong>Doctrinas:</strong> Guerra Móvil (Blindados), Fuego Superior (Artillería), Gran Plan (Planificación) o Asalto en Masa (Infantería).</li>
                     </ul>`,
-                aire: `<h3>✈️ SUPERIORIDAD AÉREA</h3><p>Sin superioridad aérea, tus tropas sufren una penalización de defensa y movimiento. El apoyo aéreo cercano (CAS) es el mayor multiplicador de daño en tierra.</p>`,
+                aire: `<h3>✈️ SUPERIORIDAD AÉREA</h3><p>Sin superioridad aérea, tus tropas sufren una penalización de defensa y movimiento. El apoyo CAS es el multiplicador de daño en tierra.</p>`,
                 logistica: `
                     <h3>📦 LOGÍSTICA Y SUMINISTROS</h3>
-                    <p><strong>Sistema de Red:</strong> El suministro fluye desde la Capital hacia los Hubs (centros de suministros) por vías férreas o hacia puertos por convoys.</p>
+                    <p><strong>Sistema de Red:</strong> El suministro fluye desde la Capital hacia los Hubs por vías férreas o hacia puertos por convoys.</p>
                     <ul>
-                        <li><strong>Motorización de Hubs:</strong> Puedes configurar cada centro para usar caballos, camiones o motorización total. Esto extiende el "alcance" del suministro hacia las provincias cercanas.</li>
-                        <li><strong>Ferrocarriles:</strong> Si hay cuellos de botella, mejora el nivel de las vías. El nivel de suministro que llega depende del nivel más bajo de vía en la ruta hacia la capital.</li>
-                        <li><strong>Trenes:</strong> Produce Trenes Civiles (estándar), de Austeridad (baratos) o Blindados (resistentes a ataques aéreos).</li>
-                        <li><strong>Puentes Aéreos:</strong> Aviones de transporte pueden suministrar tropas aisladas o cercadas si tienes superioridad aérea.</li>
-                        <li><strong>Compañía de Logística:</strong> Indispensable en frentes grandes para reducir el consumo de suministros y combustible de la división.</li>
-                    </ul>
-                    <p><strong>Dato Crítico:</strong> El desempeño logístico debe estar siempre arriba del 70%. Los cuadros de cajas amarillas/rojas en el mapa indican dónde el suministro es insuficiente.</p>`,
+                        <li><strong>Motorización de Hubs:</strong> Configura cada centro para usar camiones o motorización total para expandir el alcance del suministro.</li>
+                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para eliminar cuellos de botella.</li>
+                        <li><strong>Trenes:</strong> Produce Trenes Blindados para resistir ataques aéreos.</li>
+                        <li><strong>Compañía de Logística:</strong> Indispensable en frentes grandes para reducir el consumo.</li>
+                    </ul>`,
                 investigaciones: `
                     <h3>🔬 PRIORIDADES DE INVESTIGACIÓN</h3>
-                    <p><strong>Gestión del Tiempo:</strong> Nunca dejes un slot de investigación vacío. Prioriza siempre las tecnologías que dan bonos de tiempo antes que las de equipo.</p>
+                    <p><strong>Gestión del Tiempo:</strong> Nunca dejes un slot vacío. Prioriza tecnologías que dan bonos de tiempo.</p>
                     <ul>
-                        <li><strong>Industria y Electrónica:</strong> Son las más importantes al inicio. Investiga "Máquinas Herramientas" y "Computación" para acelerar todo el resto de la partida.</li>
-                        <li><strong>Bonos de Tiempo:</strong> Evita investigar tecnologías con años de adelanto a menos que tengas un bono del 50% o 100% por enfoque nacional.</li>
-                        <li><strong>Compañías de Apoyo:</strong> No olvides investigar la Compañía de Radio (Refuerzo) y la de Logística si planeas frentes extensos.</li>
+                        <li><strong>Industria y Electrónica:</strong> Investiga Máquinas Herramientas y Computación para acelerar el resto de la partida.</li>
+                        <li><strong>Bonos de Tiempo:</strong> Evita investigar con años de adelanto sin bonos del 50% o 100%.</li>
+                        <li><strong>Apoyo:</strong> Radio y Logística son claves.</li>
                     </ul>`,
                 inteligencia: `
-                    <h3>🕵️ SERVICIOS DE INTELIGENCIA (La Agencia)</h3>
-                    <p><strong>Espionaje:</strong> La creación de una agencia te permite conocer los planes del enemigo antes de que ocurran.</p>
+                    <h3>🕵️ SERVICIOS DE INTELIGENCIA</h3>
+                    <p><strong>La Agencia:</strong> Permite conocer los planes del enemigo y sabotear su infraestructura.</p>
                     <ul>
-                        <li><strong>Redes de Espionaje:</strong> Mantén espías en naciones enemigas para obtener bonos de combate y reducir su bonificación de planificación.</li>
-                        <li><strong>Criptografía:</strong> Desencriptar las claves enemigas otorga una ventaja táctica temporal masiva en el frente de batalla.</li>
-                        <li><strong>Misiones:</strong> Usa espías para aumentar la ideología en otros países o para preparar una colaboración de gobierno que facilite la rendición del rival.</li>
+                        <li><strong>Redes:</strong> Mantén espías para obtener bonos de combate.</li>
+                        <li><strong>Criptografía:</strong> Desencriptar claves otorga ventaja táctica masiva.</li>
+                        <li><strong>Misiones:</strong> Prepara colaboraciones de gobierno para facilitar la rendición rival.</li>
                     </ul>`
             };
 
