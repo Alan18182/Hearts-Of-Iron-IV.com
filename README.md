@@ -210,7 +210,7 @@
                 `,
                 tierra: `
                     <h3>🪖 MANUAL DEL EJÉRCITO TERRESTRE</h3>
-                    <p><strong>Estadísticas Clave:</strong> El combate se decide por Ataque Ligero (contra infantería), Ataque Pesado (contra tanques) y Defensa/Incursión. Una división pierde cuando se agota su Organización (barra verde) o su Fuerza (barra naranja).</p>
+                    <p><strong>Estadísticas Clave:</strong>El combate se decide por Ataque Ligero (contra infantería), Ataque Pesado (contra tanques) y Defensa/Incursión. Una división pierde cuando se agota su Organización (barra verde) o su Fuerza (barra naranja).</p>
                     <ul>
                         <li><strong>Ancho de Combate:</strong> No excedas el límite de la provincia para evitar penalizadores. Atacar desde múltiples direcciones amplía el ancho disponible.</li>
                         <li><strong>Terreno y Clima:</strong> Las llanuras son ideales para avanzar, mientras que las montañas y pantanos son los terrenos más difíciles. El frío extremo y la nieve pueden destruir tu logística rápidamente.</li>
