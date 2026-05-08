@@ -77,7 +77,7 @@
 
         .grid-menu {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 15px;
             width: 100%;
             margin-top: 30px;
@@ -91,6 +91,11 @@
             transition: 0.3s;
             text-align: left;
             font-weight: bold;
+        }
+
+        .tarjeta:hover {
+            background: rgba(0, 170, 255, 0.2);
+            transform: translateX(10px);
         }
 
         #detalle {
@@ -140,6 +145,7 @@
                 <div class="tarjeta" onclick="cargarSeccion('tierra')">🪖 TERRESTRE</div>
                 <div class="tarjeta" onclick="cargarSeccion('aire')">✈️ AÉREO</div>
                 <div class="tarjeta" onclick="cargarSeccion('logistica')">📦 LOGÍSTICA</div>
+                <div class="tarjeta" onclick="cargarSeccion('investigaciones')">🔬 INVESTIGACIONES</div>
             </div>
             <div id="detalle"></div>
         </div>
@@ -171,38 +177,31 @@
                         <li><strong>Fuerza de Choque (Strike Force):</strong> Tu flota principal. Déjala en puerto con esta misión para ahorrar combustible; solo saldrá cuando tus patrullas detecten una flota enemiga importante.</li>
                         <li><strong>Patrulla:</strong> Usa grupos de 1-2 Cruceros Ligeros muy rápidos equipados con radares y catapultas de aviones. Su objetivo es detectar, no combatir.</li>
                         <li><strong>Guerra de Convoyes:</strong> Los submarinos son letales en grupos de 8 a 12. Ataca en zonas de "Océano Profundo" para maximizar su ocultamiento.</li>
-                        <li><strong>Control de Estrechos:</strong> El acceso a mares cerrados (como el Mediterráneo o el Báltico) depende de puntos terrestres clave como Gibraltar, Suez o Copenhague.</li>
-                        <li><strong>Diseño de Buques:</strong> Prioriza el <strong>Control de Daños</strong> y la <strong>Batería Principal</strong> en acorazados. En destructores, enfócate en cargas de profundidad si buscas cazar submarinos.</li>
                     </ul>`,
                 tierra: `
                     <h3>🪖 EJÉRCITO Y COMBATE TERRESTRE</h3>
-                    <p><strong>Mecánicas Cruciales:</strong> El éxito depende del Ataque Ligero (contra infantería), Ataque Pesado (contra tanques) y la Organización (capacidad de mantenerse en lucha).</p>
+                    <p><strong>Mecánicas Cruciales:</strong> El éxito depende del Ataque Ligero, Ataque Pesado y la Organización.</p>
                     <ul>
-                        <li><strong>Ancho de Combate:</strong> Atacar desde múltiples flancos añade +35 de ancho por cada lado extra, permitiendo que entren más reservas al combate.</li>
-                        <li><strong>Terrenos:</strong> Las Llanuras son ideales para tanques. Montañas y Ciudades dan bonos defensivos masivos. Evita Selvas o Pantanos.</li>
-                        <li><strong>Doctrinas Terrestres:</strong> 
-                            <ul>
-                                <li><em>Fuego Superior:</em> Máximo daño de artillería, ideal contra la IA.</li>
-                                <li><em>Guerra Móvil:</em> Enfoque en velocidad y tanques para embolsamientos rápidos.</li>
-                                <li><em>Asalto en Masa:</em> Reduce el ancho de la infantería para saturar el frente.</li>
-                            </ul>
-                        </li>
+                        <li><strong>Ancho de Combate:</strong> Atacar desde múltiples flancos añade +35 de ancho por cada lado extra.</li>
+                        <li><strong>Terrenos:</strong> Las Llanuras son ideales para tanques. Montañas y Ciudades dan bonos defensivos masivos.</li>
+                        <li><strong>Doctrinas:</strong> Fuego Superior (daño de artillería), Guerra Móvil (velocidad) o Asalto en Masa (saturación de frente).</li>
                     </ul>`,
                 aire: `<h3>✈️ SUPERIORIDAD AÉREA</h3><p>Sin superioridad aérea, tus tropas sufren una penalización de defensa y movimiento. El apoyo aéreo cercano (CAS) es el mayor multiplicador de daño en tierra.</p>`,
                 logistica: `
                     <h3>📦 LOGÍSTICA Y SUMINISTROS</h3>
-                    <p><strong>Red de Suministro:</strong> El suministro fluye desde la Capital hacia los Hubs (centros de suministros) por vías férreas o hacia puertos por convoys.</p>
+                    <p><strong>Red de Suministro:</strong> El suministro fluye desde la Capital hacia los Hubs por vías férreas o vía marítima mediante puertos y Convoys.</p>
                     <ul>
-                        <li><strong>Motorización de Hubs:</strong> Clickea en un Hub para cambiar de caballos a camiones (Nivel 1 o 2). Esto expande el rango de entrega de suministros.</li>
-                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para eliminar cuellos de botella. La capacidad total depende del eslabón más débil de la ruta.</li>
-                        <li><strong>Tipos de Trenes:</strong> 
-                            <ul>
-                                <li><em>Trenes de Austeridad:</em> Baratos y rápidos de producir.</li>
-                                <li><em>Trenes Blindados:</em> Fundamentales para resistir bombardeos logísticos enemigos.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Puentes Aéreos:</strong> Aviones de transporte para suministrar unidades aisladas o cercadas.</li>
-                        <li><strong>Desempeño Logístico:</strong> Debe estar siempre arriba del 70% para evitar atrición y pérdida de organización.</li>
+                        <li><strong>Motorización de Hubs:</strong> Cambia de caballos a camiones para expandir el rango de entrega.</li>
+                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para eliminar cuellos de botella.</li>
+                        <li><strong>Trenes Blindados:</strong> Fundamentales para resistir bombardeos logísticos enemigos.</li>
+                    </ul>`,
+                investigaciones: `
+                    <h3>🔬 PRIORIDADES DE INVESTIGACIÓN</h3>
+                    <p><strong>Gestión del Tiempo:</strong> Nunca dejes un slot de investigación vacío. Prioriza siempre las tecnologías que dan bonos de tiempo antes que las de equipo.</p>
+                    <ul>
+                        <li><strong>Industria y Electrónica:</strong> Son las más importantes al inicio. Investiga "Máquinas Herramientas" y "Computación" para acelerar todo el resto de la partida.</li>
+                        <li><strong>Bonos de Tiempo:</strong> Evita investigar tecnologías con años de adelanto a menos que tengas un bono del 50% o 100% por enfoque nacional.</li>
+                        <li><strong>Compañías de Apoyo:</strong> No olvides investigar la Compañía de Radio (Refuerzo) y la de Logística si planeas frentes extensos.</li>
                     </ul>`
             };
 
