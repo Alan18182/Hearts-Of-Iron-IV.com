@@ -1,4 +1,4 @@
-<Todo hecho solo para conocimientos en el juego.>
+<!Todo hecho con el fin de conocimientos del juego.>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -22,8 +22,6 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
-
-      /* 👇 AGREGADO */
       position: relative;
     }
 
@@ -37,7 +35,6 @@
       animation: moveBg 20s linear infinite;
     }
 
-    /* 👇 ESTO ES LO NUEVO QUE FALTABA */
     body::after {
       content: "";
       position: absolute;
@@ -56,11 +53,8 @@
 
     .container {
       text-align: center;
-
-      /* 👇 AGREGADO */
       position: relative;
       z-index: 2;
-
       backdrop-filter: blur(10px);
       background: rgba(0,0,0,0.4);
       padding: 40px;
@@ -91,6 +85,7 @@
       cursor: pointer;
       transition: 0.3s;
       box-shadow: 0 0 15px #38bdf8;
+      margin: 5px;
     }
 
     button:hover {
@@ -109,7 +104,8 @@
 
 <body>
 
-  <div class="container">
+  <!-- PANTALLA PRINCIPAL -->
+  <div id="inicio" class="container">
     <h1>⚔️ Hearts Of Iron IV ⚔️</h1>
     
     <p>
@@ -123,10 +119,38 @@
     </footer>
   </div>
 
+  <!-- MENÚ -->
+  <div id="menu" class="container" style="display:none;">
+    <h1>🌍 Panel de Estrategia</h1>
+
+    <p>Selecciona una doctrina</p>
+
+    <button onclick="alert('Sección Marina')">🚢 Marina</button>
+    <button onclick="alert('Sección Terrestre')">🪖 Terrestre</button>
+    <button onclick="alert('Sección Aéreo')">✈️ Aéreo</button>
+
+    <br><br>
+
+    <button onclick="alert('Sección Investigaciones')">🔬 Investigaciones</button>
+    <button onclick="alert('Sección Focos Nacionales')">🏛️ Focos Nacionales</button>
+    <button onclick="alert('Sección Guía Logística')">📦 Guía Logística</button>
+
+    <br><br>
+
+    <button onclick="volver()">⬅️ Volver</button>
+  </div>
+
   <script>
     function entrar() {
-      alert("Preparando estrategia mundial... 🌍🔥");
+      document.getElementById('inicio').style.display = 'none';
+      document.getElementById('menu').style.display = 'block';
+    }
+
+    function volver() {
+      document.getElementById('menu').style.display = 'none';
+      document.getElementById('inicio').style.display = 'block';
     }
   </script>
+
 </body>
 </html>
