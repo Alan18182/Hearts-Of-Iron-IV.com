@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<Fines de entretenimiento y conocimientos.>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
