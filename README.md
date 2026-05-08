@@ -174,25 +174,29 @@
     </div>
 
     <script>
-        function entrar() {
-            document.getElementById("inicio").style.display = "none";
-            document.getElementById("contenido").style.display = "flex";
-        }
-        function volver() {
-            document.getElementById("contenido").style.display = "none";
-            document.getElementById("inicio").style.display = "block";
-        }
-        function abrir(tipo) {
+        function abrirSeccion(seccion) {
             const d = document.getElementById("detalle");
             d.style.display = "block";
-            const info = {
-                marina: "<h3>⚓ Marina</h3><p>Usa submarinos para atacar convoyes enemigos.</p>",
-                tierra: "<h3>🪖 Terrestre</h3><p>Mantén tu ancho de combate en 20 o 40.</p>",
-                aire: "<h3>✈ Aéreo</h3><p>La superioridad aérea es clave para avanzar.</p>",
-                logistica: "<h3>📦 Logística</h3><p>Sin suministros, tus tropas no podrán pelear.</p>"
+            
+            const textos = {
+                marina: `
+                    <h3>⚓ ESTRATEGIA NAVAL DEFINITIVA</h3>
+                    <p><strong>Estructura de Combate:</strong> La flota se divide en 4 zonas clave. Las pantallas (Destructores y Cruceros Ligeros) protegen a los Buques Capitales, y estos a su vez protegen a los Portaaviones. Mantén siempre un ratio de 4 pantallas por cada buque capital para evitar torpedos.</p>
+                    <br>
+                    <p><strong>Tipos de Flota:</strong>
+                        <ul>
+                            <li><strong>Fuerza de Choque:</strong> Tu flota principal; mantenla en puerto para ahorrar combustible hasta que se detecte al enemigo.</li>
+                            <li><strong>Patrulla:</strong> Cruceros ligeros rápidos con catapultas de aviones para localizar objetivos sin entrar en combate.</li>
+                            <li><strong>Submarinos:</strong> Enfocados exclusivamente en asfixiar la logística enemiga hundiendo convoyes en océanos profundos.</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <p><strong>Consejo Técnico:</strong> Prioriza la investigación de "Control de Daños" y usa diseños de 1940 con motores nivel 3. La velocidad es tu mejor defensa para esquivar ataques enemigos.</p>
+                `,
+                tierra: "<h3>🪖 Terrestre</h3><p>Diseñá divisiones equilibradas y usá el terreno a tu favor. ¡Cuidado con el invierno ruso!</p>",
+                aire: "<h3>✈ Aéreo</h3><p>La superioridad aérea gana guerras. Apoyá a tus tropas con apoyo aéreo cercano.</p>",
+                logistica: "<h3>📦 Logística</h3><p>Sin trenes ni suministros, tus tanques no se moverán. Vigilá siempre tus líneas de abastecimiento.</p>"
             };
-            d.innerHTML = info[tipo];
+
+            d.innerHTML = textos[seccion];
         }
-    </script>
-</body>
-</html>
