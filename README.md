@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Hearts Of Iron IV</title>
 
-  <!-- Fuente gamer -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
   <style>
@@ -25,7 +24,6 @@
       overflow: hidden;
     }
 
-    /* Fondo animado */
     body::before {
       content: "";
       position: absolute;
