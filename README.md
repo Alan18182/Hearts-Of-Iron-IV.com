@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearts Of Iron IV - Cuartel de Mando</title>
+    <title>Hearts Of Iron IV - Bunker </title>
     <style>
         /* --- ESTILOS VISUALES --- */
         * {
