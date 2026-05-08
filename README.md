@@ -225,7 +225,7 @@
                     <h3>📦 LOGÍSTICA Y SUMINISTROS</h3>
                     <p><strong>Red de Suministros:</strong>Todo nace en la Capital y se distribuye a través de Centros de Suministros (puntos amarillos) y Bases Navales (anclas) mediante Ferrocarriles o Convoys.</p>
                     <ul>
-                        <li><strong>Motorización:</strong> Clica en un Centro de Suministros para cambiar de transporte con caballos a camiones. Esto aumenta drásticamente el alcance del suministro en el frente.</li>
+                        <li><strong>Motorización:</strong>Clica en un Centro de Suministros para cambiar de transporte con caballos a camiones. Esto aumenta drásticamente el alcance del suministro en el frente.</li>
                         <li><strong>Vías Férreas:</strong> Sube el nivel de los ferrocarriles para evitar "cuellos de botella" y permitir que más equipo llegue desde la capital a zonas lejanas.</li>
                         <li><strong>Tipos de Trenes:</strong> 
                             <ul>
