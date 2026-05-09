@@ -181,44 +181,51 @@
                     <h3>⚓ ESTRATEGIA NAVAL DEFINITIVA</h3>
                     <p><strong>Composición y Proporción:</strong> La supervivencia de tu flota depende de las pantallas (Destructores y Cruceros Ligeros). Debes mantener un ratio mínimo de 4 pantallas por cada Buque Capital para bloquear torpedos enemigos.</p>
                     <ul>
-                        <li><strong>Fuerza de Choque (Strike Force):</strong> Tu flota principal. Déjala en puerto para ahorrar combustible; solo saldrá cuando tus patrullas detecten al enemigo.</li>
-                        <li><strong>Patrulla:</strong> Usa Cruceros Ligeros rápidos con radares. Su objetivo es detectar, no combatir.</li>
+                        <li><strong>Fuerza de Choque (Strike Force):</strong> Tu flota principal en puerto para ahorrar combustible.</li>
+                        <li><strong>Patrulla:</strong> Cruceros Ligeros rápidos con radares para detección.</li>
                         <li><strong>Guerra de Convoyes:</strong> Submarinos en grupos de 8 a 12 en Océano Profundo.</li>
-                        <li><strong>Diseño:</strong> Prioriza el Control de Daños y la Batería Principal.</li>
                     </ul>`,
                 tierra: `
                     <h3>🪖 EJÉRCITO Y COMBATE TERRESTRE</h3>
                     <p><strong>Mecánicas de Batalla:</strong> Las divisiones luchan según su Ataque Ligero, Pesado y Defensa. Se pierde cuando la Organización o Fuerza llega a cero.</p>
                     <ul>
-                        <li><strong>Ancho de Combate:</strong> Determinado por el terreno. Atacar desde múltiples direcciones suma +35 de ancho adicional.</li>
-                        <li><strong>Terrenos:</strong> Selva y Pantano son los peores; Llanura es el mejor para avanzar. Ciudades y Colinas ofrecen bonos defensivos.</li>
+                        <li><strong>Ancho de Combate:</strong> Atacar desde múltiples direcciones suma +35 de ancho adicional por cada flanco extra.</li>
+                        <li><strong>Terrenos:</strong> Llanura es el mejor para avanzar; Selva y Pantano penalizan severamente el movimiento y ataque.</li>
                         <li><strong>Doctrinas:</strong> Guerra Móvil (Blindados), Fuego Superior (Artillería), Gran Plan (Planificación) o Asalto en Masa (Infantería).</li>
                     </ul>`,
-                aire: `<h3>✈️ SUPERIORIDAD AÉREA</h3><p>Sin superioridad aérea, tus tropas sufren una penalización de defensa y movimiento. El apoyo CAS es el multiplicador de daño en tierra.</p>`,
+                aire: `
+                    <h3>✈️ PODER AÉREO Y SUPERIORIDAD</h3>
+                    <p><strong>La Regla de Oro:</strong> Quien controla el cielo, controla el frente. La Superioridad Aérea otorga un bono directo de ataque a tus tropas y reduce la defensa y movimiento del enemigo.</p>
+                    <ul>
+                        <li><strong>Misión de Superioridad:</strong> Asigna Cazadores (Fighters) para derribar aviones enemigos. Prioriza el diseño con alta Agilidad y Ataque Aéreo.</li>
+                        <li><strong>Apoyo Aéreo Cercano (CAS):</strong> Los aviones de ataque a tierra infligen daño directo a la organización y fuerza enemiga durante los combates. Son el mayor multiplicador de bajas en el juego.</li>
+                        <li><strong>Bombardeo Logístico:</strong> Una misión clave para destruir trenes y camiones enemigos, dejando sus divisiones sin suministros en medio de la batalla.</li>
+                        <li><strong>Eficiencia de Misión:</strong> Depende de la cobertura del radar y del alcance del avión. Operar desde bases aéreas saturadas reduce drásticamente el rendimiento.</li>
+                        <li><strong>Intercepción:</strong> Úsala para defender tus fábricas de los bombardeos estratégicos enemigos sin desperdiciar combustible patrullando constantemente.</li>
+                    </ul>`,
                 logistica: `
                     <h3>📦 LOGÍSTICA Y SUMINISTROS</h3>
-                    <p><strong>Sistema de Red:</strong> El suministro fluye desde la Capital hacia los Hubs por vías férreas o hacia puertos por convoys.</p>
+                    <p><strong>Sistema de Red:</strong> El suministro fluye desde la Capital hacia los Hubs por vías férreas.</p>
                     <ul>
-                        <li><strong>Motorización de Hubs:</strong> Configura cada centro para usar camiones o motorización total para expandir el alcance del suministro.</li>
-                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para eliminar cuellos de botella.</li>
-                        <li><strong>Trenes:</strong> Produce Trenes Blindados para resistir ataques aéreos.</li>
-                        <li><strong>Compañía de Logística:</strong> Indispensable en frentes grandes para reducir el consumo.</li>
+                        <li><strong>Motorización de Hubs:</strong> Configura centros para usar camiones para expandir el alcance del suministro hacia el frente.</li>
+                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para evitar cuellos de botella en el flujo.</li>
+                        <li><strong>Trenes:</strong> Produce Trenes Blindados para resistir ataques aéreos enemigos.</li>
                     </ul>`,
                 investigaciones: `
                     <h3>🔬 PRIORIDADES DE INVESTIGACIÓN</h3>
-                    <p><strong>Gestión del Tiempo:</strong> Nunca dejes un slot vacío. Prioriza tecnologías que dan bonos de tiempo.</p>
+                    <p><strong>Gestión del Tiempo:</strong> Prioriza tecnologías de Industria y Electrónica para acelerar el ritmo de toda la partida.</p>
                     <ul>
-                        <li><strong>Industria y Electrónica:</strong> Investiga Máquinas Herramientas y Computación para acelerar el resto de la partida.</li>
-                        <li><strong>Bonos de Tiempo:</strong> Evita investigar con años de adelanto sin bonos del 50% o 100%.</li>
-                        <li><strong>Apoyo:</strong> Radio y Logística son claves.</li>
+                        <li><strong>Máquinas Herramientas:</strong> Aumentan tu capacidad de producción en fábricas civiles y militares.</li>
+                        <li><strong>Computación:</strong> Reduce el tiempo total de cada investigación futura.</li>
+                        <li><strong>Bonos:</strong> Aprovecha los enfoques nacionales para obtener bonos de investigación del 100%.</li>
                     </ul>`,
                 inteligencia: `
                     <h3>🕵️ SERVICIOS DE INTELIGENCIA</h3>
-                    <p><strong>La Agencia:</strong> Permite conocer los planes del enemigo y sabotear su infraestructura.</p>
+                    <p><strong>La Agencia:</strong> Permite conocer la ubicación de las tropas enemigas y sus diseños tecnológicos.</p>
                     <ul>
-                        <li><strong>Redes:</strong> Mantén espías para obtener bonos de combate.</li>
-                        <li><strong>Criptografía:</strong> Desencriptar claves otorga ventaja táctica masiva.</li>
-                        <li><strong>Misiones:</strong> Prepara colaboraciones de gobierno para facilitar la rendición rival.</li>
+                        <li><strong>Redes:</strong> Mantén espías activos para reducir el bono de planificación enemigo.</li>
+                        <li><strong>Criptografía:</strong> Desencriptar claves otorga una ventaja táctica masiva temporal.</li>
+                        <li><strong>Colaboración:</strong> Prepara gobiernos de colaboración para anexionar territorios con menos resistencia.</li>
                     </ul>`
             };
 
