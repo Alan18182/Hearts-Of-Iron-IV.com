@@ -181,51 +181,52 @@
                     <h3>⚓ ESTRATEGIA NAVAL DEFINITIVA</h3>
                     <p><strong>Composición y Proporción:</strong> La supervivencia de tu flota depende de las pantallas (Destructores y Cruceros Ligeros). Debes mantener un ratio mínimo de 4 pantallas por cada Buque Capital para bloquear torpedos enemigos.</p>
                     <ul>
-                        <li><strong>Fuerza de Choque (Strike Force):</strong> Tu flota principal en puerto para ahorrar combustible.</li>
-                        <li><strong>Patrulla:</strong> Cruceros Ligeros rápidos con radares para detección.</li>
+                        <li><strong>Fuerza de Choque (Strike Force):</strong> Tu flota principal. Déjala en puerto para ahorrar combustible; solo saldrá cuando tus patrullas detecten al enemigo.</li>
+                        <li><strong>Patrulla:</strong> Usa Cruceros Ligeros rápidos con radares. Su objetivo es detectar, no combatir.</li>
                         <li><strong>Guerra de Convoyes:</strong> Submarinos en grupos de 8 a 12 en Océano Profundo.</li>
+                        <li><strong>Diseño:</strong> Prioriza el Control de Daños y la Batería Principal en acorazados.</li>
                     </ul>`,
                 tierra: `
                     <h3>🪖 EJÉRCITO Y COMBATE TERRESTRE</h3>
                     <p><strong>Mecánicas de Batalla:</strong> Las divisiones luchan según su Ataque Ligero, Pesado y Defensa. Se pierde cuando la Organización o Fuerza llega a cero.</p>
                     <ul>
-                        <li><strong>Ancho de Combate:</strong> Atacar desde múltiples direcciones suma +35 de ancho adicional por cada flanco extra.</li>
-                        <li><strong>Terrenos:</strong> Llanura es el mejor para avanzar; Selva y Pantano penalizan severamente el movimiento y ataque.</li>
+                        <li><strong>Ancho de Combate:</strong> Determinado por el terreno. Atacar desde múltiples direcciones suma +35 de ancho adicional por cada flanco.</li>
+                        <li><strong>Terrenos:</strong> Selva y Pantano son los peores; Llanura es el mejor para avanzar. Ciudades y Colinas ofrecen bonos defensivos.</li>
                         <li><strong>Doctrinas:</strong> Guerra Móvil (Blindados), Fuego Superior (Artillería), Gran Plan (Planificación) o Asalto en Masa (Infantería).</li>
                     </ul>`,
                 aire: `
                     <h3>✈️ PODER AÉREO Y SUPERIORIDAD</h3>
-                    <p><strong>La Regla de Oro:</strong> Quien controla el cielo, controla el frente. La Superioridad Aérea otorga un bono directo de ataque a tus tropas y reduce la defensa y movimiento del enemigo.</p>
+                    <p><strong>Control del Cielo:</strong> La Superioridad Aérea otorga un bono de ataque a tus tropas y reduce la defensa y velocidad del enemigo en el terreno.</p>
                     <ul>
-                        <li><strong>Misión de Superioridad:</strong> Asigna Cazadores (Fighters) para derribar aviones enemigos. Prioriza el diseño con alta Agilidad y Ataque Aéreo.</li>
-                        <li><strong>Apoyo Aéreo Cercano (CAS):</strong> Los aviones de ataque a tierra infligen daño directo a la organización y fuerza enemiga durante los combates. Son el mayor multiplicador de bajas en el juego.</li>
-                        <li><strong>Bombardeo Logístico:</strong> Una misión clave para destruir trenes y camiones enemigos, dejando sus divisiones sin suministros en medio de la batalla.</li>
-                        <li><strong>Eficiencia de Misión:</strong> Depende de la cobertura del radar y del alcance del avión. Operar desde bases aéreas saturadas reduce drásticamente el rendimiento.</li>
-                        <li><strong>Intercepción:</strong> Úsala para defender tus fábricas de los bombardeos estratégicos enemigos sin desperdiciar combustible patrullando constantemente.</li>
+                        <li><strong>Cazas (Fighters):</strong> Su única misión debe ser la Superioridad Aérea. En el diseñador, prioriza siempre la <strong>Agilidad</strong> y el <strong>Ataque Aéreo</strong> sobre el blindaje.</li>
+                        <li><strong>Apoyo Aéreo Cercano (CAS):</strong> Estos aviones atacan directamente a las divisiones enemigas en combate. Sin CAS, es casi imposible romper líneas defensivas fuertes.</li>
+                        <li><strong>Bombardeo Logístico:</strong> Una de las misiones más potentes; destruye trenes y camiones enemigos para dejar sus divisiones sin suministros.</li>
+                        <li><strong>Eficiencia de Misión:</strong> Asegúrate de que tus aviones tengan suficiente alcance para cubrir toda la zona aérea, de lo contrario su efectividad cae drásticamente.</li>
+                        <li><strong>Bases Aéreas:</strong> No satures los aeropuertos. Si excedes la capacidad de la base, tus aviones sufrirán penalizaciones masivas de combate.</li>
                     </ul>`,
                 logistica: `
                     <h3>📦 LOGÍSTICA Y SUMINISTROS</h3>
-                    <p><strong>Sistema de Red:</strong> El suministro fluye desde la Capital hacia los Hubs por vías férreas.</p>
+                    <p><strong>Sistema de Red:</strong> El suministro fluye desde la Capital hacia los Hubs por vías férreas o hacia puertos por convoys.</p>
                     <ul>
-                        <li><strong>Motorización de Hubs:</strong> Configura centros para usar camiones para expandir el alcance del suministro hacia el frente.</li>
-                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para evitar cuellos de botella en el flujo.</li>
-                        <li><strong>Trenes:</strong> Produce Trenes Blindados para resistir ataques aéreos enemigos.</li>
+                        <li><strong>Motorización de Hubs:</strong> Configura cada centro para usar camiones para expandir el alcance del suministro.</li>
+                        <li><strong>Ferrocarriles:</strong> Mejora el nivel de las vías para eliminar cuellos de botella.</li>
+                        <li><strong>Trenes Blindados:</strong> Indispensables para resistir el bombardeo logístico enemigo.</li>
                     </ul>`,
                 investigaciones: `
                     <h3>🔬 PRIORIDADES DE INVESTIGACIÓN</h3>
-                    <p><strong>Gestión del Tiempo:</strong> Prioriza tecnologías de Industria y Electrónica para acelerar el ritmo de toda la partida.</p>
+                    <p><strong>Gestión del Tiempo:</strong> Nunca dejes un slot vacío. Prioriza tecnologías que dan bonos de tiempo de investigación.</p>
                     <ul>
-                        <li><strong>Máquinas Herramientas:</strong> Aumentan tu capacidad de producción en fábricas civiles y militares.</li>
-                        <li><strong>Computación:</strong> Reduce el tiempo total de cada investigación futura.</li>
-                        <li><strong>Bonos:</strong> Aprovecha los enfoques nacionales para obtener bonos de investigación del 100%.</li>
+                        <li><strong>Industria y Electrónica:</strong> Investiga Máquinas Herramientas y Computación desde el primer día.</li>
+                        <li><strong>Bonos:</strong> No investigues con años de adelanto a menos que tengas bonos de enfoques nacionales.</li>
+                        <li><strong>Apoyo:</strong> Radio y Logística son las compañías de apoyo más importantes para el frente.</li>
                     </ul>`,
                 inteligencia: `
                     <h3>🕵️ SERVICIOS DE INTELIGENCIA</h3>
-                    <p><strong>La Agencia:</strong> Permite conocer la ubicación de las tropas enemigas y sus diseños tecnológicos.</p>
+                    <p><strong>La Agencia:</strong> Permite conocer los diseños tecnológicos del enemigo y sabotear su infraestructura.</p>
                     <ul>
-                        <li><strong>Redes:</strong> Mantén espías activos para reducir el bono de planificación enemigo.</li>
+                        <li><strong>Redes:</strong> Mantén espías para reducir el bono de planificación enemigo.</li>
                         <li><strong>Criptografía:</strong> Desencriptar claves otorga una ventaja táctica masiva temporal.</li>
-                        <li><strong>Colaboración:</strong> Prepara gobiernos de colaboración para anexionar territorios con menos resistencia.</li>
+                        <li><strong>Misiones:</strong> Prepara colaboraciones de gobierno para que los países se rindan antes.</li>
                     </ul>`
             };
 
